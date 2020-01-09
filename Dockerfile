@@ -1,5 +1,6 @@
-FROM registry.redhat.io/ubi7/ubi
-#FROM registry.access.redhat.com/ubi7/ubi
+# _tc: https://access.redhat.com/containers/?tab=images&get-method=unauthenticated#/registry.access.redhat.com/ubi7/ubi
+# states unauthenticated - use registry.access.redhat.com/ubi7/ubi 
+FROM registry.access.redhat.com/ubi7/ubi
 
 RUN yum -y install --disableplugin=subscription-manager httpd24 rh-php72 rh-php72-php \
   && yum --disableplugin=subscription-manager clean all
